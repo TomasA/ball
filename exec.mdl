@@ -1,0 +1,118 @@
+Model {
+  Name                    "exec"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7567, Date 2016-11-07"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "exec"
+    Location                [10, 33, 205, 634]
+    #GUID                   06242175-cc79-4b1a-8c9a-b0fd9131e5d4
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [55, 68, 100, 357]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.05"
+      ntick0                  5
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   ff965494-74ee-4cfb-b9a3-2b792c0fbd6d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MNO"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [120, 118, 170, 132]
+      SourceBlock             "execlib/IODRV"
+      module                  "MonarcoDrv"
+      classname               "MonarcoHatDrv"
+      cfgname                 "monarco.rio"
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #RTFlags                5
+      #GUID                   ff0eed29-a60c-42d1-8133-9bf91a9175cd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MonarcoDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [120, 83, 170, 97]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   760ec092-d008-495d-b52c-f9ac4687a92c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [120, 223, 170, 237]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #RTFlags                5
+      #GUID                   2fb49951-db32-4d70-9f89-f1e5b58a2f72
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "MonarcoDrv"
+      DstPort                 1
+      #GUID                   e9043284-4d1c-435e-956d-f05eb247cd79
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "MNO"
+      DstPort                 1
+      #GUID                   7d0b73c1-af38-4ba4-9774-be6e4f0641d9
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "task"
+      DstPort                 1
+      #GUID                   d4ceeb3c-06f0-4016-8135-c91d7001d681
+    }
+  }
+}

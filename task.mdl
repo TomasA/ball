@@ -1,0 +1,779 @@
+Model {
+  Name                    "task"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7567, Date 2016-11-07"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "task"
+    Location                [250, 74, 1808, 757]
+    #GUID                   ec1683ce-7be7-409c-b51e-9bd22783a88d
+    Block {
+      BlockType               Reference
+      Name                    "CNB12"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [705, 253, 725, 267]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   05334243-af17-47ab-9fd8-a6038e2ba937
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [750, 73, 975, 97]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   9a6b3737-e86c-4bb9-9f9f-c8b1aa780d7c
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [750, 103, 975, 127]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   454d0a25-29bd-42aa-98da-64b15c8cfbc0
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [750, 133, 975, 157]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   8490e6da-de49-43bf-a1ab-14792651c536
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 103, 145, 117]
+      ShowName                off
+      GotoTag                 "MNO__CNT1Q"
+      BackgroundColor         "yellow"
+      #GUID                   22b2a00e-2cb2-476e-8d16-1b87df7ca7e7
+    }
+    Block {
+      BlockType               From
+      Name                    "From10"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [595, 172, 680, 188]
+      BackgroundColor         "white"
+      ShowName                off
+      CloseFcn                "tagdialog Close"
+      GotoTag                 "angle"
+      #GUID                   e996465c-8ac7-4f21-8380-c8b785f8c735
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 38, 145, 52]
+      ShowName                off
+      GotoTag                 "MNO__AI1"
+      BackgroundColor         "yellow"
+      #GUID                   b3ab2401-d0c7-4a62-88ba-23e230260424
+    }
+    Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [595, 192, 680, 208]
+      BackgroundColor         "white"
+      ShowName                off
+      CloseFcn                "tagdialog Close"
+      GotoTag                 "frequency"
+      #GUID                   9485d7d7-471a-4d3d-ab54-9dd19f9f8b8a
+    }
+    Block {
+      BlockType               From
+      Name                    "From4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 422, 130, 438]
+      BackgroundColor         "white"
+      ShowName                off
+      CloseFcn                "tagdialog Close"
+      GotoTag                 "active"
+      #GUID                   bfd287f1-79eb-4056-809d-d34b69427566
+    }
+    Block {
+      BlockType               From
+      Name                    "From5"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 297, 140, 313]
+      BackgroundColor         "white"
+      ShowName                off
+      CloseFcn                "tagdialog Close"
+      GotoTag                 "frequency"
+      #GUID                   d66e9573-7527-44e0-a6f7-01316408b1d3
+    }
+    Block {
+      BlockType               From
+      Name                    "From6"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 272, 140, 288]
+      BackgroundColor         "white"
+      ShowName                off
+      CloseFcn                "tagdialog Close"
+      GotoTag                 "angle"
+      #GUID                   a5691881-0518-42bb-a4aa-4e55b9bc7daf
+    }
+    Block {
+      BlockType               From
+      Name                    "From7"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 367, 130, 383]
+      BackgroundColor         "white"
+      ShowName                off
+      CloseFcn                "tagdialog Close"
+      GotoTag                 "dFrequency"
+      #GUID                   5cbbb974-86c6-40fb-b9e9-f9e0207129e2
+    }
+    Block {
+      BlockType               From
+      Name                    "From8"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [595, 212, 680, 228]
+      BackgroundColor         "white"
+      ShowName                off
+      CloseFcn                "tagdialog Close"
+      GotoTag                 "dFrequency"
+      #GUID                   1a5c7226-2af2-4d68-b0be-0f389ded4a09
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [215, 273, 240, 287]
+      SourceBlock             "mathlib/GAIN"
+      k                       "-0.105"
+      #GUID                   2074bdaf-2e31-414b-8249-420df98168c6
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [305, 48, 380, 62]
+      ShowName                off
+      GotoTag                 "active"
+      TagVisibility           "local"
+      #GUID                   c7465c1a-ba67-48ca-b2b0-4f557de396bd
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [305, 103, 380, 117]
+      ShowName                off
+      GotoTag                 "frequency"
+      TagVisibility           "local"
+      #GUID                   8d08f2d8-c01e-4bf9-a4f6-8018ca2ee532
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [280, 366, 405, 384]
+      ShowName                off
+      GotoTag                 "MNO__AO1"
+      TagVisibility           "local"
+      BackgroundColor         "yellow"
+      #GUID                   45dd97c7-151f-4d32-8ad0-e524bd5245bb
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 272, 390, 288]
+      ShowName                off
+      GotoTag                 "dFrequency"
+      TagVisibility           "local"
+      #GUID                   8722b13d-64af-45c7-b33e-a362647029a5
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto5"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [290, 422, 405, 438]
+      ShowName                off
+      GotoTag                 "MNO__DO2"
+      TagVisibility           "local"
+      FontSize                10
+      BackgroundColor         "yellow"
+      #GUID                   9bbd65fa-7e73-4efb-94e9-bbd8aa0af060
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto7"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [305, 28, 380, 42]
+      ShowName                off
+      GotoTag                 "angle"
+      TagVisibility           "local"
+      #GUID                   002dda1a-8402-4a61-be74-d74041e13edf
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "IRC"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [175, 88, 265, 132]
+      ShowPortLabels          on
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   bd9e953f-e3b1-48ae-8ea0-7240b2893d4a
+      System {
+        Name                    "IRC"
+        Location                [285, 307, 1863, 894]
+        #GUID                   bd9e953f-e3b1-48ae-8ea0-7240b2893d4a
+        Block {
+          BlockType               Inport
+          Name                    "CNT"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [20, 23, 50, 37]
+          Port                    1
+          #GUID                   6cb85c69-24f0-4407-b8b1-1d2cb9802f10
+        }
+        Block {
+          BlockType               Reference
+          Name                    "ENCPVE"
+          Ports                   [5, 4, 0, 0, 0]
+          Position                [75, 22, 120, 98]
+          SourceBlock             "dsplib/ENCPVE"
+          cntbits                 16
+          lowrap                  "-9.00719925474099E+015"
+          hiwrap                  "9.00719925474099E+015"
+          gainnum                 1
+          gainden                 "4774.64829275686"
+          tsfreq                  100000000
+          #GUID                   5231e815-b4c1-4991-b89d-218966261844
+        }
+        Block {
+          BlockType               Reference
+          Name                    "GAIN"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [140, 23, 165, 37]
+          SourceBlock             "mathlib/GAIN"
+          k                       "6.5E-05"
+          #GUID                   54b0765b-5bb1-4926-9229-e028700a1fcd
+        }
+        Block {
+          BlockType               Reference
+          Name                    "LPF"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [190, 23, 215, 37]
+          SourceBlock             "analoglib/LPF"
+          fb                      150
+          xi                      "0.707"
+          ISSF                    off
+          #GUID                   7beafe97-2511-407e-baf2-d64a7bda1173
+        }
+        Block {
+          BlockType               Outport
+          Name                    "freqency"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [245, 23, 275, 37]
+          Port                    1
+          #GUID                   b5cda4db-4d46-4b9f-8b02-f6924e1adf56
+        }
+        Line {
+          SrcBlock                "CNT"
+          SrcPort                 1
+          DstBlock                "ENCPVE"
+          DstPort                 1
+          #GUID                   5bda8e68-8087-48f7-ac44-2e17e55b65d0
+        }
+        Line {
+          SrcBlock                "ENCPVE"
+          SrcPort                 1
+          DstBlock                "GAIN"
+          DstPort                 1
+          #GUID                   921f1a81-d165-4424-8283-dba0ed8a5efe
+        }
+        Line {
+          SrcBlock                "GAIN"
+          SrcPort                 1
+          DstBlock                "LPF"
+          DstPort                 1
+          #GUID                   52b2fd68-1ba8-44de-b398-1407ead1702f
+        }
+        Line {
+          SrcBlock                "LPF"
+          SrcPort                 1
+          DstBlock                "freqency"
+          DstPort                 1
+          #GUID                   bf2689bf-e948-4d3e-80cf-de740e759c17
+        }
+      }
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND6"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [750, 168, 795, 292]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       10000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      timesrc                 "1: CORETIMER"
+      User                    ""
+      #GUID                   2b9efcd2-baa6-4552-8432-35f8a68395a1
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "frequencyToMotor"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [150, 363, 260, 387]
+      ShowPortLabels          on
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   15eab2c8-1e04-4757-a19b-bb46ea9e777b
+      System {
+        Name                    "frequencyToMotor"
+        Location                [285, 307, 1863, 894]
+        #GUID                   15eab2c8-1e04-4757-a19b-bb46ea9e777b
+        Block {
+          BlockType               Inport
+          Name                    "frequency"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [20, 23, 50, 37]
+          Port                    1
+          #GUID                   de671c5d-3623-4a16-bff3-4c611ba9adc1
+        }
+        Block {
+          BlockType               Reference
+          Name                    "ADD"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [130, 23, 155, 47]
+          SourceBlock             "mathlib/ADD"
+          #GUID                   7dab163f-0056-4d32-8aaf-df53bd5df10d
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNR"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [40, 83, 60, 97]
+          SourceBlock             "mathlib/CNR"
+          ycn                     "2.52"
+          #GUID                   23cef52f-2ae6-4f53-b7d2-725f913e1034
+        }
+        Block {
+          BlockType               Reference
+          Name                    "GAIN1"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [80, 23, 105, 37]
+          SourceBlock             "mathlib/GAIN"
+          k                       "-0.28"
+          #GUID                   c48d4474-9403-4664-9d0d-b66151f34749
+        }
+        Block {
+          BlockType               Reference
+          Name                    "SAT"
+          Ports                   [3, 3, 0, 0, 0]
+          Position                [190, 28, 220, 62]
+          SourceBlock             "reglib/SAT"
+          tp                      1
+          tn                      1
+          hilim0                  30
+          lolim0                  -25
+          HLD                     on
+          #GUID                   193ae78a-75bb-4e53-9081-ac77720ebb61
+        }
+        Block {
+          BlockType               Outport
+          Name                    "motor"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [265, 28, 295, 42]
+          Port                    1
+          #GUID                   37646623-2fdd-4b96-a722-75119324865d
+        }
+        Line {
+          SrcBlock                "ADD"
+          SrcPort                 1
+          DstBlock                "SAT"
+          DstPort                 1
+          #GUID                   00fc656e-cb63-4f20-bec1-4d962a33691f
+        }
+        Line {
+          SrcBlock                "CNR"
+          SrcPort                 1
+          Points                  [50, 0]
+          DstBlock                "ADD"
+          DstPort                 2
+          #GUID                   388a4335-9bdd-4c55-9c1c-4c5bcd223f48
+        }
+        Line {
+          SrcBlock                "GAIN1"
+          SrcPort                 1
+          DstBlock                "ADD"
+          DstPort                 1
+          #GUID                   995843a9-beb6-42c5-97ca-c1c4aa8eae34
+        }
+        Line {
+          SrcBlock                "SAT"
+          SrcPort                 1
+          DstBlock                "motor"
+          DstPort                 1
+          #GUID                   c16a879d-b605-44c3-ab89-7b4c6b876c8b
+        }
+        Line {
+          SrcBlock                "frequency"
+          SrcPort                 1
+          DstBlock                "GAIN1"
+          DstPort                 1
+          #GUID                   d0a6ecd9-db7d-454a-9bd7-f32c294641cf
+        }
+      }
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "sonicToAngle"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [175, 24, 265, 66]
+      ShowPortLabels          on
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   814c2c6e-55f1-4a76-995f-02981a3ce245
+      System {
+        Name                    "sonicToAngle"
+        Location                [75, 379, 558, 544]
+        #GUID                   814c2c6e-55f1-4a76-995f-02981a3ce245
+        Block {
+          BlockType               Inport
+          Name                    "sonic"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [20, 23, 50, 37]
+          Port                    1
+          #GUID                   9f4650c5-c2a9-40d1-b3b2-542fd8483df3
+        }
+        Block {
+          BlockType               Reference
+          Name                    "ADD"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [90, 23, 115, 47]
+          SourceBlock             "mathlib/ADD"
+          #GUID                   5d3ac9ee-5ec3-460a-b00f-76e62b076306
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNR"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [25, 73, 45, 87]
+          SourceBlock             "mathlib/CNR"
+          ycn                     -3
+          #GUID                   a3f43a15-4051-434c-a305-1f5ab7cc59ae
+        }
+        Block {
+          BlockType               Reference
+          Name                    "GAIN"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [135, 28, 160, 42]
+          SourceBlock             "mathlib/GAIN"
+          k                       10
+          #GUID                   d5358def-08b3-493f-a1d9-b086d906b9c5
+        }
+        Block {
+          BlockType               Reference
+          Name                    "OR_"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [245, 38, 280, 62]
+          SourceBlock             "logiclib/OR_"
+          #GUID                   a4f49895-2676-4e96-bdb3-29c9ddfa00b8
+        }
+        Block {
+          BlockType               Reference
+          Name                    "SAT"
+          Ports                   [3, 3, 0, 0, 0]
+          Position                [185, 28, 215, 62]
+          SourceBlock             "reglib/SAT"
+          tp                      1
+          tn                      1
+          hilim0                  30
+          lolim0                  -25
+          HLD                     on
+          #GUID                   8e14035b-5a0b-4d9f-acd5-6363cbef7b06
+        }
+        Block {
+          BlockType               Reference
+          Name                    "SSW"
+          Ports                   [3, 1, 0, 0, 0]
+          Position                [315, 28, 345, 62]
+          SourceBlock             "analoglib/SSW"
+          #GUID                   108c6fc7-e9ab-46e7-931d-b6e7a10ec5a6
+        }
+        Block {
+          BlockType               Outport
+          Name                    "angle"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [365, 38, 395, 52]
+          Port                    1
+          #GUID                   655e9745-808c-4ad2-a564-7cdb2177d5e4
+        }
+        Block {
+          BlockType               Outport
+          Name                    "active"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [365, 78, 395, 92]
+          Port                    2
+          #GUID                   ac2dc039-3dd9-475c-a252-f20e6126f86b
+        }
+        Line {
+          SrcBlock                "ADD"
+          SrcPort                 1
+          DstBlock                "GAIN"
+          DstPort                 1
+          #GUID                   362d6cca-635b-4f35-b3ce-f7938d89a8b6
+        }
+        Line {
+          SrcBlock                "CNR"
+          SrcPort                 1
+          Points                  [25, 0]
+          DstBlock                "ADD"
+          DstPort                 2
+          #GUID                   e96f1c15-6f03-4296-bae8-4ec866c897ea
+        }
+        Line {
+          SrcBlock                "GAIN"
+          SrcPort                 1
+          DstBlock                "SAT"
+          DstPort                 1
+          #GUID                   4ac9a94c-657e-4695-8665-f0a095e9bc6c
+        }
+        Line {
+          SrcBlock                "OR_"
+          SrcPort                 1
+          Points                  [15, 0]
+          DstBlock                "SSW"
+          DstPort                 3
+          #GUID                   0c3ea1e3-ea11-49e2-8b76-f60ef64a9a44
+        }
+        Line {
+          SrcBlock                "OR_"
+          SrcPort                 2
+          Points                  [10, 0; 0, 30]
+          DstBlock                "active"
+          DstPort                 1
+          #GUID                   7a95b491-3941-4fe1-a4f6-bdf1d090c759
+        }
+        Line {
+          SrcBlock                "SAT"
+          SrcPort                 1
+          DstBlock                "SSW"
+          DstPort                 1
+          #GUID                   63b898e1-790b-4bfb-be79-0b3905c54653
+        }
+        Line {
+          SrcBlock                "SAT"
+          SrcPort                 2
+          DstBlock                "OR_"
+          DstPort                 1
+          #GUID                   c761ce3d-5421-4509-8153-09cdbfc11fee
+        }
+        Line {
+          SrcBlock                "SAT"
+          SrcPort                 3
+          DstBlock                "OR_"
+          DstPort                 2
+          #GUID                   02f04e50-2313-46ac-8655-bc0abc46b3c7
+        }
+        Line {
+          SrcBlock                "SSW"
+          SrcPort                 1
+          DstBlock                "angle"
+          DstPort                 1
+          #GUID                   4176df3c-f9ba-40e8-8ea9-21e23fcd7c20
+        }
+        Line {
+          SrcBlock                "sonic"
+          SrcPort                 1
+          DstBlock                "ADD"
+          DstPort                 1
+          #GUID                   3043a307-91dc-4036-a3bf-3ba92eb97e0e
+        }
+      }
+    }
+    Line {
+      SrcBlock                "CNB12"
+      SrcPort                 1
+      DstBlock                "TRND6"
+      DstPort                 5
+      #GUID                   0c5ba3c9-c903-402a-914e-4f2fd09daa85
+    }
+    Line {
+      SrcBlock                "From1"
+      SrcPort                 1
+      DstBlock                "IRC"
+      DstPort                 1
+      #GUID                   6dc76d9f-2754-4223-9974-49d359be9496
+    }
+    Line {
+      SrcBlock                "From10"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   71d00fe2-473f-40f1-8606-4bbc5bc11367
+      Branch {
+        Points                  [0, -95]
+        DstBlock                "Display"
+        DstPort                 1
+        #GUID                   a2f38910-3c29-43bd-b6af-452afd8e54db
+      }
+      Branch {
+        DstBlock                "TRND6"
+        DstPort                 1
+        #GUID                   81b2a8c7-1275-435f-8e2e-9aad129ff04a
+      }
+    }
+    Line {
+      SrcBlock                "From2"
+      SrcPort                 1
+      DstBlock                "sonicToAngle"
+      DstPort                 1
+      #GUID                   ebf07322-559d-4bcb-917e-93a15022dfb6
+    }
+    Line {
+      SrcBlock                "From3"
+      SrcPort                 1
+      Points                  [20, 0]
+      #GUID                   b095fcc2-1522-4e2a-b609-2fcd02a5b554
+      Branch {
+        Points                  [0, -85]
+        DstBlock                "Display1"
+        DstPort                 1
+        #GUID                   976aba23-e4bf-47b4-91df-21cb47ec2c8d
+      }
+      Branch {
+        DstBlock                "TRND6"
+        DstPort                 2
+        #GUID                   ca815953-f429-4e8b-9fcd-93959b9bbc38
+      }
+    }
+    Line {
+      SrcBlock                "From4"
+      SrcPort                 1
+      DstBlock                "Goto5"
+      DstPort                 1
+      #GUID                   1d4fe783-3893-43d1-8898-b2893fb8262e
+    }
+    Line {
+      SrcBlock                "From6"
+      SrcPort                 1
+      DstBlock                "GAIN"
+      DstPort                 1
+      #GUID                   795fed6c-bfbb-47d9-a0d6-f79eca993ddf
+    }
+    Line {
+      SrcBlock                "From7"
+      SrcPort                 1
+      DstBlock                "frequencyToMotor"
+      DstPort                 1
+      #GUID                   1b66ccce-5151-40b0-8289-1d679d132d2f
+    }
+    Line {
+      SrcBlock                "From8"
+      SrcPort                 1
+      Points                  [30, 0]
+      #GUID                   94cb134d-24cc-4e07-8bdd-fd0a1722dd60
+      Branch {
+        Points                  [0, -75]
+        DstBlock                "Display2"
+        DstPort                 1
+        #GUID                   5f36dbcb-d838-4198-8885-912d409f1f0a
+      }
+      Branch {
+        DstBlock                "TRND6"
+        DstPort                 3
+        #GUID                   7b71b276-7740-489d-bd30-03c96bf078fc
+      }
+    }
+    Line {
+      SrcBlock                "GAIN"
+      SrcPort                 1
+      DstBlock                "Goto4"
+      DstPort                 1
+      #GUID                   a7594566-2fa0-4406-ac5b-2d5688a2e5a8
+    }
+    Line {
+      SrcBlock                "IRC"
+      SrcPort                 1
+      DstBlock                "Goto2"
+      DstPort                 1
+      #GUID                   bb9dcdf6-36b6-44cd-9cae-ba4545eec315
+    }
+    Line {
+      SrcBlock                "frequencyToMotor"
+      SrcPort                 1
+      DstBlock                "Goto3"
+      DstPort                 1
+      #GUID                   eca346d7-4e30-4941-915c-a9f03657ce53
+    }
+    Line {
+      SrcBlock                "sonicToAngle"
+      SrcPort                 1
+      DstBlock                "Goto7"
+      DstPort                 1
+      #GUID                   733756d0-3015-4e9b-a868-3bf8f0b4f7a3
+    }
+    Line {
+      SrcBlock                "sonicToAngle"
+      SrcPort                 2
+      DstBlock                "Goto1"
+      DstPort                 1
+      #GUID                   9414bf4e-ea41-43e9-9ad0-d8a5f45533f1
+    }
+  }
+}
