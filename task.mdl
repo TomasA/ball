@@ -38,6 +38,14 @@ Model {
     #GUID                   ec1683ce-7be7-409c-b51e-9bd22783a88d
     Block {
       BlockType               Reference
+      Name                    "ADD"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [230, 278, 255, 302]
+      SourceBlock             "mathlib/ADD"
+      #GUID                   a3e8a970-df92-434a-8bd6-18760238941e
+    }
+    Block {
+      BlockType               Reference
       Name                    "CNB12"
       Ports                   [0, 1, 0, 0, 0]
       Position                [705, 253, 725, 267]
@@ -182,10 +190,19 @@ Model {
       BlockType               Reference
       Name                    "GAIN"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [215, 273, 240, 287]
+      Position                [175, 273, 200, 287]
       SourceBlock             "mathlib/GAIN"
       k                       "-0.105"
       #GUID                   2074bdaf-2e31-414b-8249-420df98168c6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [175, 298, 200, 312]
+      SourceBlock             "mathlib/GAIN"
+      k                       "-0.001"
+      #GUID                   0c6063d1-4929-44ef-8016-f6a618db80d5
     }
     Block {
       BlockType               Goto
@@ -222,7 +239,7 @@ Model {
       BlockType               Goto
       Name                    "Goto4"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [300, 272, 390, 288]
+      Position                [290, 282, 380, 298]
       ShowName                off
       GotoTag                 "dFrequency"
       TagVisibility           "local"
@@ -648,6 +665,13 @@ Model {
       }
     }
     Line {
+      SrcBlock                "ADD"
+      SrcPort                 1
+      DstBlock                "Goto4"
+      DstPort                 1
+      #GUID                   c8909469-1f0a-48e0-8be5-cfdd53bfd964
+    }
+    Line {
       SrcBlock                "CNB12"
       SrcPort                 1
       DstBlock                "TRND6"
@@ -710,6 +734,13 @@ Model {
       #GUID                   1d4fe783-3893-43d1-8898-b2893fb8262e
     }
     Line {
+      SrcBlock                "From5"
+      SrcPort                 1
+      DstBlock                "GAIN1"
+      DstPort                 1
+      #GUID                   85333f86-b273-4475-a2f1-fe118376afc7
+    }
+    Line {
       SrcBlock                "From6"
       SrcPort                 1
       DstBlock                "GAIN"
@@ -743,9 +774,18 @@ Model {
     Line {
       SrcBlock                "GAIN"
       SrcPort                 1
-      DstBlock                "Goto4"
+      Points                  [10, 0]
+      DstBlock                "ADD"
       DstPort                 1
-      #GUID                   a7594566-2fa0-4406-ac5b-2d5688a2e5a8
+      #GUID                   93add196-9236-435c-9021-d27c9a291732
+    }
+    Line {
+      SrcBlock                "GAIN1"
+      SrcPort                 1
+      Points                  [10, 0]
+      DstBlock                "ADD"
+      DstPort                 2
+      #GUID                   a3633be3-9bf2-4b7d-ba6e-93ab5e29f184
     }
     Line {
       SrcBlock                "IRC"
