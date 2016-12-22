@@ -40,7 +40,7 @@ Model {
       BlockType               Reference
       Name                    "ADD"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [230, 278, 255, 302]
+      Position                [245, 278, 270, 302]
       SourceBlock             "mathlib/ADD"
       #GUID                   a3e8a970-df92-434a-8bd6-18760238941e
     }
@@ -192,7 +192,7 @@ Model {
       Ports                   [1, 1, 0, 0, 0]
       Position                [175, 273, 200, 287]
       SourceBlock             "mathlib/GAIN"
-      k                       "-0.105"
+      k                       "-0.11"
       #GUID                   2074bdaf-2e31-414b-8249-420df98168c6
     }
     Block {
@@ -201,7 +201,7 @@ Model {
       Ports                   [1, 1, 0, 0, 0]
       Position                [175, 298, 200, 312]
       SourceBlock             "mathlib/GAIN"
-      k                       "-0.001"
+      k                       "-0.8"
       #GUID                   0c6063d1-4929-44ef-8016-f6a618db80d5
     }
     Block {
@@ -239,7 +239,7 @@ Model {
       BlockType               Goto
       Name                    "Goto4"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [290, 282, 380, 298]
+      Position                [295, 282, 385, 298]
       ShowName                off
       GotoTag                 "dFrequency"
       TagVisibility           "local"
@@ -774,15 +774,15 @@ Model {
     Line {
       SrcBlock                "GAIN"
       SrcPort                 1
-      Points                  [10, 0]
+      Points                  [25, 0]
       DstBlock                "ADD"
       DstPort                 1
-      #GUID                   93add196-9236-435c-9021-d27c9a291732
+      #GUID                   89615413-3611-4b6c-ac31-2cb1d4e08679
     }
     Line {
       SrcBlock                "GAIN1"
       SrcPort                 1
-      Points                  [10, 0]
+      Points                  [25, 0]
       DstBlock                "ADD"
       DstPort                 2
       #GUID                   a3633be3-9bf2-4b7d-ba6e-93ab5e29f184

@@ -44,7 +44,7 @@ Model {
       SourceBlock             "execlib/EXEC"
       target                  "Generic target device"
       tick                    "0.05"
-      ntick0                  5
+      ntick0                  1
       ntick1                  50
       ntick2                  100
       ntick3                  1200
