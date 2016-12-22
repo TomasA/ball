@@ -40,9 +40,34 @@ Model {
       BlockType               Reference
       Name                    "ADD"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [245, 278, 270, 302]
+      Position                [385, 268, 410, 292]
       SourceBlock             "mathlib/ADD"
       #GUID                   a3e8a970-df92-434a-8bd6-18760238941e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ADD1"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [320, 263, 345, 287]
+      SourceBlock             "mathlib/ADD"
+      #GUID                   862c29d1-8c9a-45bf-a791-b48e153c946e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "AND_"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [195, 533, 230, 557]
+      SourceBlock             "logiclib/AND_"
+      #GUID                   f0ac4f1f-a220-4255-a8e6-3a56680e7577
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [110, 573, 130, 587]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   48463be0-1e48-4cd5-a2db-58b32c9c9b2a
     }
     Block {
       BlockType               Reference
@@ -52,6 +77,43 @@ Model {
       SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   05334243-af17-47ab-9fd8-a6038e2ba937
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [165, 243, 180, 257]
+      SourceBlock             "mathlib/CNB"
+      SourceType              "CNB"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      YCN                     on
+      #GUID                   c8292bb0-e8bc-4f15-a05a-af1ad5fa02d1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DER1"
+      Ports                   [3, 3, 0, 0, 0]
+      Position                [205, 218, 245, 252]
+      SourceBlock             "analoglib/DER"
+      SourceType              "DER"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      n                       12
+      nmax                    1000
+      #GUID                   6be8f06a-a155-47a7-a81e-aa163c72d067
     }
     Block {
       BlockType               Display
@@ -135,7 +197,7 @@ Model {
       BlockType               From
       Name                    "From4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [45, 422, 130, 438]
+      Position                [45, 532, 130, 548]
       BackgroundColor         "white"
       ShowName                off
       CloseFcn                "tagdialog Close"
@@ -168,7 +230,7 @@ Model {
       BlockType               From
       Name                    "From7"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [45, 367, 130, 383]
+      Position                [45, 477, 130, 493]
       BackgroundColor         "white"
       ShowName                off
       CloseFcn                "tagdialog Close"
@@ -192,7 +254,7 @@ Model {
       Ports                   [1, 1, 0, 0, 0]
       Position                [175, 273, 200, 287]
       SourceBlock             "mathlib/GAIN"
-      k                       "-0.09"
+      k                       "-0.108"
       #GUID                   2074bdaf-2e31-414b-8249-420df98168c6
     }
     Block {
@@ -201,8 +263,17 @@ Model {
       Ports                   [1, 1, 0, 0, 0]
       Position                [175, 298, 200, 312]
       SourceBlock             "mathlib/GAIN"
-      k                       "-0.8"
+      k                       0
       #GUID                   0c6063d1-4929-44ef-8016-f6a618db80d5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [270, 218, 295, 232]
+      SourceBlock             "mathlib/GAIN"
+      k                       "-0.0005"
+      #GUID                   35be2b53-ac3c-4e7d-9f99-2acfdd8a43e9
     }
     Block {
       BlockType               Goto
@@ -228,7 +299,7 @@ Model {
       BlockType               Goto
       Name                    "Goto3"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [280, 366, 405, 384]
+      Position                [280, 476, 405, 494]
       ShowName                off
       GotoTag                 "MNO__AO1"
       TagVisibility           "local"
@@ -239,7 +310,7 @@ Model {
       BlockType               Goto
       Name                    "Goto4"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [295, 282, 385, 298]
+      Position                [445, 272, 535, 288]
       ShowName                off
       GotoTag                 "dFrequency"
       TagVisibility           "local"
@@ -249,7 +320,7 @@ Model {
       BlockType               Goto
       Name                    "Goto5"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [290, 422, 405, 438]
+      Position                [290, 532, 405, 548]
       ShowName                off
       GotoTag                 "MNO__DO2"
       TagVisibility           "local"
@@ -389,7 +460,7 @@ Model {
       BlockType               SubSystem
       Name                    "frequencyToMotor"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [150, 363, 260, 387]
+      Position                [150, 473, 260, 497]
       ShowPortLabels          on
       MaskType                "REX sequence"
       MaskIconFrame           on
@@ -669,7 +740,29 @@ Model {
       SrcPort                 1
       DstBlock                "Goto4"
       DstPort                 1
-      #GUID                   c8909469-1f0a-48e0-8be5-cfdd53bfd964
+      #GUID                   553ee952-c0d1-4c68-9a64-f32adf2146ac
+    }
+    Line {
+      SrcBlock                "ADD1"
+      SrcPort                 1
+      DstBlock                "ADD"
+      DstPort                 1
+      #GUID                   6dba5424-cec8-479c-9bf0-d8c87ad2376d
+    }
+    Line {
+      SrcBlock                "AND_"
+      SrcPort                 1
+      DstBlock                "Goto5"
+      DstPort                 1
+      #GUID                   76e09bb7-0cef-4aeb-aef2-0b2a0a505f6b
+    }
+    Line {
+      SrcBlock                "CNB1"
+      SrcPort                 1
+      Points                  [45, 0]
+      DstBlock                "AND_"
+      DstPort                 2
+      #GUID                   b9d9d25f-94e9-4a8c-9b29-bc2f37d1ed0a
     }
     Line {
       SrcBlock                "CNB12"
@@ -677,6 +770,21 @@ Model {
       DstBlock                "TRND6"
       DstPort                 5
       #GUID                   0c5ba3c9-c903-402a-914e-4f2fd09daa85
+    }
+    Line {
+      SrcBlock                "CNB3"
+      SrcPort                 1
+      Points                  [0, -15]
+      DstBlock                "DER1"
+      DstPort                 2
+      #GUID                   a0f06496-6d74-4885-bf46-cb67bd6ff93a
+    }
+    Line {
+      SrcBlock                "DER1"
+      SrcPort                 1
+      DstBlock                "GAIN2"
+      DstPort                 1
+      #GUID                   f1397a8d-c648-4b57-9ea4-0ac5479a32cd
     }
     Line {
       SrcBlock                "From1"
@@ -729,9 +837,9 @@ Model {
     Line {
       SrcBlock                "From4"
       SrcPort                 1
-      DstBlock                "Goto5"
+      DstBlock                "AND_"
       DstPort                 1
-      #GUID                   1d4fe783-3893-43d1-8898-b2893fb8262e
+      #GUID                   f7128d12-a95d-4f78-b8e6-5ceec4aeb4d7
     }
     Line {
       SrcBlock                "From5"
@@ -743,9 +851,19 @@ Model {
     Line {
       SrcBlock                "From6"
       SrcPort                 1
-      DstBlock                "GAIN"
-      DstPort                 1
+      Points                  [10, 0]
       #GUID                   795fed6c-bfbb-47d9-a0d6-f79eca993ddf
+      Branch {
+        Points                  [0, -55]
+        DstBlock                "DER1"
+        DstPort                 1
+        #GUID                   26878765-3ec2-4e4e-b640-1dfb213266d7
+      }
+      Branch {
+        DstBlock                "GAIN"
+        DstPort                 1
+        #GUID                   532c8b20-8702-4f69-b0e6-4225ac6a1a43
+      }
     }
     Line {
       SrcBlock                "From7"
@@ -774,18 +892,25 @@ Model {
     Line {
       SrcBlock                "GAIN"
       SrcPort                 1
-      Points                  [25, 0]
-      DstBlock                "ADD"
-      DstPort                 1
-      #GUID                   89615413-3611-4b6c-ac31-2cb1d4e08679
+      DstBlock                "ADD1"
+      DstPort                 2
+      #GUID                   b0432a1b-e72b-4c6c-9a29-bc95820150e5
     }
     Line {
       SrcBlock                "GAIN1"
       SrcPort                 1
-      Points                  [25, 0]
+      Points                  [165, 0]
       DstBlock                "ADD"
       DstPort                 2
       #GUID                   a3633be3-9bf2-4b7d-ba6e-93ab5e29f184
+    }
+    Line {
+      SrcBlock                "GAIN2"
+      SrcPort                 1
+      Points                  [5, 0]
+      DstBlock                "ADD1"
+      DstPort                 1
+      #GUID                   c3b2a1a3-de20-4558-9b1e-c23683707cbd
     }
     Line {
       SrcBlock                "IRC"
