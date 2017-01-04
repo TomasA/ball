@@ -56,6 +56,21 @@ Model {
     }
     Block {
       BlockType               Reference
+      Name                    "HMI"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [55, 393, 105, 407]
+      SourceBlock             "execlib/HMI"
+      IncludeHMI              on
+      HmiDir                  "hmi"
+      SourceDir               "hmisrc"
+      GenerateWebWatch        on
+      GenerateRexHMI          off
+      RedirectToHMI           on
+      Compression             off
+      #GUID                   a0b45842-75ed-407d-b144-f7874ba2f2cb
+    }
+    Block {
+      BlockType               Reference
       Name                    "MNO"
       Ports                   [1, 1, 0, 0, 0]
       Position                [120, 118, 170, 132]
