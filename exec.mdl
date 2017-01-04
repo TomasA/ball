@@ -63,7 +63,7 @@ Model {
       IncludeHMI              on
       HmiDir                  "hmi"
       SourceDir               "hmisrc"
-      GenerateWebWatch        on
+      GenerateWebWatch        off
       GenerateRexHMI          off
       RedirectToHMI           on
       Compression             off
