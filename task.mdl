@@ -225,15 +225,15 @@ Model {
       SourceBlock             "reglib/PIDU"
       irtype                  "5: PD"
       RACT                    on
-      k                       "0.45"
+      k                       "0.15"
       ti                      4
-      td                      "0.0001"
+      td                      "0.001"
       nd                      2
       b                       1
       c                       0
       tt                      1
-      hilim                   "0.03"
-      lolim                   "-0.03"
+      hilim                   "0.08"
+      lolim                   "-0.08"
       dz                      0
       icotype                 "1: Analog"
       #GUID                   3193b0e0-268f-4d2a-beb6-14ba29841ecf
@@ -258,6 +258,15 @@ Model {
     }
     Block {
       BlockType               Reference
+      Name                    "RUN_MOTOR1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [620, 208, 640, 222]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   bd91aeb7-2dd5-43d6-a4a4-4eae4ebb6944
+    }
+    Block {
+      BlockType               Reference
       Name                    "SSW"
       Ports                   [3, 1, 0, 0, 0]
       Position                [240, 28, 270, 62]
@@ -271,6 +280,28 @@ Model {
       Position                [330, 278, 360, 312]
       SourceBlock             "analoglib/SSW"
       #GUID                   cff9d07b-a07b-4e25-98ec-5650f4b45763
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [675, 163, 720, 237]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      timesrc                 "1: CORETIMER"
+      User                    ""
+      #GUID                   7b06e077-677c-4f86-b720-b2d86f790e18
     }
     Block {
       BlockType               Reference
@@ -346,9 +377,19 @@ Model {
     Line {
       SrcBlock                "From6"
       SrcPort                 1
-      DstBlock                "PIDU"
-      DstPort                 3
+      Points                  [10, 0]
       #GUID                   1a8709c1-8610-46b0-a54a-37dfb6d22209
+      Branch {
+        DstBlock                "PIDU"
+        DstPort                 3
+        #GUID                   39b79af7-e6fa-4eaf-b0d8-5e61d41771f2
+      }
+      Branch {
+        Points                  [0, -70]
+        DstBlock                "TRND"
+        DstPort                 4
+        #GUID                   c31985b8-1ab7-425e-933e-19202afc02ec
+      }
     }
     Line {
       SrcBlock                "GAIN"
@@ -384,9 +425,18 @@ Model {
       }
       Branch {
         Points                  [0, -25]
-        DstBlock                "LPBRK"
-        DstPort                 1
         #GUID                   280f5573-e14e-4bba-b0db-77a3c59391a6
+        Branch {
+          DstBlock                "LPBRK"
+          DstPort                 1
+          #GUID                   d94372a1-de30-48c8-bf3e-62547d828019
+        }
+        Branch {
+          Points                  [0, -55]
+          DstBlock                "TRND"
+          DstPort                 1
+          #GUID                   5063facb-d645-404c-8ed4-4a411937c223
+        }
       }
     }
     Line {
@@ -395,6 +445,14 @@ Model {
       DstBlock                "GAIN"
       DstPort                 1
       #GUID                   3cb555bd-3c57-414c-a25e-4f829a17bb29
+    }
+    Line {
+      SrcBlock                "PIDU"
+      SrcPort                 4
+      Points                  [400, 0]
+      DstBlock                "TRND"
+      DstPort                 2
+      #GUID                   9fc6d428-b830-4b3c-a601-9f8661e1fa00
     }
     Line {
       SrcBlock                "REL"
@@ -422,6 +480,13 @@ Model {
       #GUID                   6c036b69-2d8f-44ec-b1f5-5b723afa5262
     }
     Line {
+      SrcBlock                "RUN_MOTOR1"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   02a71649-2e58-47bf-ab17-a62aeea6a73d
+    }
+    Line {
       SrcBlock                "SSW"
       SrcPort                 1
       DstBlock                "Goto7"
@@ -445,10 +510,20 @@ Model {
     Line {
       SrcBlock                "distance_sp"
       SrcPort                 1
-      Points                  [100, 0; 0, 55]
-      DstBlock                "PIDU"
-      DstPort                 2
+      Points                  [100, 0]
       #GUID                   3bee2753-c7c1-44fb-90a8-7e4c8e789fb7
+      Branch {
+        Points                  [0, 55]
+        DstBlock                "PIDU"
+        DstPort                 2
+        #GUID                   07390480-0bfb-4817-9c96-21b58c18b766
+      }
+      Branch {
+        Points                  [470, 0]
+        DstBlock                "TRND"
+        DstPort                 3
+        #GUID                   37cb3286-6428-4a9c-bdbe-23c1a5fc06ea
+      }
     }
   }
 }
